@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/main.js" defer type="module"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    },
+                    screens: {
+                        xss: "320px",
+                        xs: "480px",
+                        ss: "620px",
+                        sm: "768px",
+                        md: "1060px",
+                        lg: "1600px",
+                        lgg: "1780px",
+                        xl: "1800px",
+
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Image Generator</title>
+    <link href="./css/spinnr.css" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <div
+        class="flex items-center justify-center bg-[#008B8B] text-8xl pb-5 max-md:text-4xl max-md:pb-12 max-md:pt-5 font-semibold">
+        Image
+        Generator
+    </div>
+    <section class="bg-[#008B8B] mt-24 w-[40%] mx-auto pt-5 pb-4">
+        <form id="image-form" class="">
+            <div class="flex justify-center text-xl font-semibold">
+                <h1>Describe the Image</h1>
+            </div>
+            <div class="flex justify-center mt-4">
+                <input type="text" id="prompt" placeholder="Enter Text" />
+            </div>
+            <div class="flex justify-center mt-4">
+                <select name="size" id="size">
+                    <option value="small">Small</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="'large">Large</option>
+                </select>
+            </div>
+            <div class="flex items-center justify-center mt-4">
+                <button type="submit"
+                    class="bg-white py-2 px-6 hover:bg-black hover:text-white duration-500">Generate</button>
+            </div>
+        </form>
+
+    </section>
+    <section class="image pb-12">
+        <div class="flex justify-center mt-12">
+            <h2 class="msg"></h2>
+        </div>
+        <div class="flex justify-center mb-12">
+            <img src="" alt="" id="image" />
+        </div>
+    </section>
+    <div class="socket">
+        <div class="gel center-gel">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c1 r1">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c2 r1">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c3 r1">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c4 r1">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c5 r1">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c6 r1">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+
+        <div class="gel c7 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+
+        <div class="gel c8 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c9 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c10 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c11 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c12 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c13 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c14 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c15 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c16 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c17 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c18 r2">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c19 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c20 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c21 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c22 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c23 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c24 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c25 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c26 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c28 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c29 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c30 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c31 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c32 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c33 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c34 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c35 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c36 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+        <div class="gel c37 r3">
+            <div class="hex-brick h1"></div>
+            <div class="hex-brick h2"></div>
+            <div class="hex-brick h3"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
